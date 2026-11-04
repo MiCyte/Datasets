@@ -15,15 +15,23 @@ Both files are derived from the network's datum store (MOS) by the MiCyte publis
 that runs micyte.com, which serves them at <https://micyte.com/assets/almanac/taxonomy.json> and
 <https://micyte.com/assets/registry.json>.
 
-**State on 2026-11-04.** This repository was seeded with the exact bytes micyte.com served that day:
+Each publisher writes its feed into a clone of this repository, and the change lands here as a
+signed-off commit; micyte.com serves a copy of the file committed here. A re-publish that would
+change nothing but a feed's `generated_at` writes nothing, so every commit here changes data.
+On the publishing host, the gate every release passes compares the copy committed here with the
+one micyte.com serves, byte for byte, and fails while they differ
+([#1](https://github.com/MiCyte/Datasets/issues/1)).
+
+The repository was seeded on 2026-11-04 with the exact bytes micyte.com served that day:
 
 | File | sha256 |
 |---|---|
 | `almanac/taxonomy.json` | `aca8f32ad38d9f2d0253ee5aab6d2e594716170946170480cfee008c0dfcc0d8` |
 | `registry.json` | `f69ff152b78d44b22021374395517435ebb32a86b092fa1d06602c7191339a0c` |
 
-The publishers do not write here yet. Until they do ([#1](https://github.com/MiCyte/Datasets/issues/1)),
-the copy micyte.com serves is the current one, and these files can fall behind it.
+The plantae profile (`plantae.json`) and the taxonomy feed (`taxonomy.json`, the txa tree) have
+publishers too; each joins this repository when micyte.com serves it
+([#2](https://github.com/MiCyte/Datasets/issues/2)).
 
 ## License
 

@@ -27,8 +27,11 @@ the copy micyte.com serves is the current one, and these files can fall behind i
 
 ## License
 
-None chosen yet. Until a LICENSE file is added here, no license is granted beyond what GitHub's
-terms of service allow.
+The data in this repository is licensed under the Creative Commons Attribution-ShareAlike 4.0
+International license (CC BY-SA 4.0): see `LICENSE`. You may copy, adapt and build on it, for
+any purpose, if you credit MiCyte and release what you derive from it under the same license.
+The share-alike condition covers adaptations of the data itself; the MiCyte code is licensed
+separately (AGPL-3.0, in its own repositories).
 
 ## Contributing
 
